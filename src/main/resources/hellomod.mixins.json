@@ -1,0 +1,19 @@
+{
+	"required": true,
+	"package": "com.cihv.hellomod.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"ExampleMixin"
+	],
+	"client": [
+		"ModelLoaderMixin",
+		"ItemRendererMixin",
+		"ItemRendererAccessor"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

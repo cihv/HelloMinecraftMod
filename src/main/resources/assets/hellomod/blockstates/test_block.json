@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "hellomod:block/test_block"
+    }
+  }
+}

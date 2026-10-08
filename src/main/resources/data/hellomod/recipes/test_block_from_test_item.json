@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "hellomod:test_item"
+    }
+  },
+  "result": {
+    "item": "hellomod:test_block"
+  }
+}

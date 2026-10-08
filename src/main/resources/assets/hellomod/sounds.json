@@ -1,0 +1,71 @@
+{
+  "metal_detector_found_ore": {
+    "subtitle": "sounds.hellomod.metal_detector_found_ore",
+    "sounds": [
+      "hellomod:metal_detector_found_ore"
+    ]
+  },
+  "test_sound_block_break": {
+    "subtitle": "sounds.hellomod.test_sound_block_break",
+    "sounds": [
+      "hellomod:test_sound_block_break"
+    ]
+  },
+  "test_sound_block_fall": {
+    "subtitle": "sounds.hellomod.test_sound_block_fall",
+    "sounds": [
+      "hellomod:test_sound_block_fall"
+    ]
+  },
+  "test_sound_block_hit": {
+    "subtitle": "sounds.hellomod.test_sound_block_hit",
+    "sounds": [
+      "hellomod:test_sound_block_hit"
+    ]
+  },
+  "test_sound_block_place": {
+    "subtitle": "sounds.hellomod.test_sound_block_place",
+    "sounds": [
+      "hellomod:test_sound_block_place"
+    ]
+  },
+  "test_sound_block_step": {
+    "subtitle": "sounds.hellomod.test_sound_block_step",
+    "sounds": [
+      "hellomod:test_sound_block_step"
+    ]
+  },
+  "wa_wa_lian_music": {
+    "sounds": [
+      {
+        "name": "hellomod:wa_wa_lian_music",
+        "stream": true,
+        "attenuation_distance": 6
+      }
+    ]
+  },
+  "ori_ambient_sound": {
+    "subtitle": "sounds.hellomod.ori_ambient_sound",
+    "sounds": [
+      "hellomod:ori_ambient_sound"
+    ]
+  },
+  "ori_hurt_sound": {
+    "subtitle": "sounds.hellomod.ori_hurt_sound",
+    "sounds": [
+      "hellomod:ori_hurt_sound"
+    ]
+  },
+  "ori_death_sound": {
+    "subtitle": "sounds.hellomod.ori_death_sound",
+    "sounds": [
+      "hellomod:ori_death_sound"
+    ]
+  },
+  "ori_dance_sound": {
+    "subtitle": "sounds.hellomod.ori_dance_sound",
+    "sounds": [
+      "hellomod:ori_dance_sound"
+    ]
+  }
+}

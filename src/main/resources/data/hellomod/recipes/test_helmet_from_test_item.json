@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "###",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "hellomod:test_item"
+    }
+  },
+  "result": {
+    "item": "hellomod:test_helmet"
+  },
+  "show_notification": true
+}

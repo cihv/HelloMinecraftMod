@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "hellomod",
+	"version": "${version}",
+	"name": "Hello Mod",
+	"description": "This is a mod for studying and developing",
+	"authors": [
+		"cihv"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://gitcode.com/w-scheng/HelloMinecraftMod"
+	},
+	"license": "MIT",
+	"icon": "assets/hellomod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.cihv.hellomod.HelloMod"
+		],
+		"client": [
+			"com.cihv.hellomod.HelloModClient"
+		],
+		"fabric-datagen": [
+			"com.cihv.hellomod.HelloModDataGenerator"
+		]
+	},
+	"mixins": [
+		"hellomod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}

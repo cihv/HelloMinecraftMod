@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 40,
+  "experience": 10,
+  "group": "awesome_lead",
+  "ingredient": {
+    "item": "hellomod:test_block"
+  },
+  "result": "hellomod:awesome_lead"
+}
