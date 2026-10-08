@@ -9,13 +9,19 @@
 ---
 
 # **模组安装**
+  - ## **游戏环境**
+    - **Minecraft 1.20.1**
+    - **Fabric**
+    - **fabric-loader >= 0.19.5**
+    - **java >= 17**
+    - **客户端**
 
   - ## **前置**
     - **Geckolib-4.8.4（可<a href="https://cdn.modrinth.com/data/8BmcQJ2H/versions/SD2lOScS/geckolib-fabric-1.20.1-4.8.4.jar?mr_download_reason=standalone&mr_game_version=1.20.1&mr_loader=fabric">点击</a>下载）**
     
   
   - ## **安装**
-    - **可直接前往 release 页面获取对应jar包**
+    - **前往对应 <a href="https://github.com/cihv/HelloMinecraftMod/releases/tag/v1.0.0">release</a> 页面获取jar包**
 
 ---
 
@@ -131,7 +137,7 @@
       ![Ori生物-物品栏图片](./README-files/Ori生物-物品栏图片.png)
     * 演示视频：
     
-      https://github.com/user-attachments/assets/1906bc3c-eb6d-42b7-aec8-563f810f5e52
+      https://github.com/user-attachments/assets/906c5e91-7a0c-4646-b314-219e47d92e0f
 
 ---
 
