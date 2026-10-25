@@ -1,0 +1,94 @@
+{
+  "mappings": {
+    "com/cihv/leadopt/mixin/AmbientEntityMixin": {
+      "canBeLeashed": "Lnet/minecraft/class_1421;method_5931(Lnet/minecraft/class_1657;)Z"
+    },
+    "com/cihv/leadopt/mixin/BoatMixin": {
+      "addAdditionalSaveData": "Lnet/minecraft/class_1690;method_5652(Lnet/minecraft/class_2487;)V",
+      "interact": "Lnet/minecraft/class_1690;method_5688(Lnet/minecraft/class_1657;Lnet/minecraft/class_1268;)Lnet/minecraft/class_1269;",
+      "readAdditionalSaveData": "Lnet/minecraft/class_1690;method_5749(Lnet/minecraft/class_2487;)V",
+      "tick": "Lnet/minecraft/class_1690;method_5773()V"
+    },
+    "com/cihv/leadopt/mixin/BoatRendererMixin": {
+      "render(Lnet/minecraft/world/entity/vehicle/Boat;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V": "Lnet/minecraft/class_881;method_3888(Lnet/minecraft/class_1690;FFLnet/minecraft/class_4587;Lnet/minecraft/class_4597;I)V"
+    },
+    "com/cihv/leadopt/mixin/ClientPktListener": {
+      "handleEntityLinkPacket": "Lnet/minecraft/class_634;method_11110(Lnet/minecraft/class_2740;)V"
+    },
+    "com/cihv/leadopt/mixin/EndermanTeleportMixin": {
+      "teleport()Z": "Lnet/minecraft/class_1560;method_7029()Z"
+    },
+    "com/cihv/leadopt/mixin/LeadItemMixin": {
+      "Lnet/minecraft/world/item/LeadItem;bindPlayerMobs(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/InteractionResult;": "Lnet/minecraft/class_1804;method_7994(Lnet/minecraft/class_1657;Lnet/minecraft/class_1937;Lnet/minecraft/class_2338;)Lnet/minecraft/class_1269;",
+      "useOn": "Lnet/minecraft/class_1804;method_7884(Lnet/minecraft/class_1838;)Lnet/minecraft/class_1269;"
+    },
+    "com/cihv/leadopt/mixin/LeashFenceKnotEntityMixin": {
+      "interact": "Lnet/minecraft/class_1532;method_5688(Lnet/minecraft/class_1657;Lnet/minecraft/class_1268;)Lnet/minecraft/class_1269;"
+    },
+    "com/cihv/leadopt/mixin/MerchantEntityMixin": {
+      "canBeLeashed": "Lnet/minecraft/class_3988;method_5931(Lnet/minecraft/class_1657;)Z"
+    },
+    "com/cihv/leadopt/mixin/MobEntityMixin": {
+      "canBeLeashed": "Lnet/minecraft/class_1308;method_5931(Lnet/minecraft/class_1657;)Z"
+    },
+    "com/cihv/leadopt/mixin/MobMixin": {
+      "checkAndHandleImportantInteractions": "Lnet/minecraft/class_1308;method_29506(Lnet/minecraft/class_1657;Lnet/minecraft/class_1268;)Lnet/minecraft/class_1269;"
+    },
+    "com/cihv/leadopt/mixin/PandaEntityMixin": {
+      "canBeLeashed": "Lnet/minecraft/class_1440;method_5931(Lnet/minecraft/class_1657;)Z"
+    },
+    "com/cihv/leadopt/mixin/TurtleEntityMixin": {
+      "canBeLeashed": "Lnet/minecraft/class_1481;method_5931(Lnet/minecraft/class_1657;)Z"
+    },
+    "com/cihv/leadopt/mixin/WaterCreatureEntityMixin": {
+      "canBeLeashed": "Lnet/minecraft/class_1480;method_5931(Lnet/minecraft/class_1657;)Z"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "com/cihv/leadopt/mixin/AmbientEntityMixin": {
+        "canBeLeashed": "Lnet/minecraft/class_1421;method_5931(Lnet/minecraft/class_1657;)Z"
+      },
+      "com/cihv/leadopt/mixin/BoatMixin": {
+        "addAdditionalSaveData": "Lnet/minecraft/class_1690;method_5652(Lnet/minecraft/class_2487;)V",
+        "interact": "Lnet/minecraft/class_1690;method_5688(Lnet/minecraft/class_1657;Lnet/minecraft/class_1268;)Lnet/minecraft/class_1269;",
+        "readAdditionalSaveData": "Lnet/minecraft/class_1690;method_5749(Lnet/minecraft/class_2487;)V",
+        "tick": "Lnet/minecraft/class_1690;method_5773()V"
+      },
+      "com/cihv/leadopt/mixin/BoatRendererMixin": {
+        "render(Lnet/minecraft/world/entity/vehicle/Boat;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V": "Lnet/minecraft/class_881;method_3888(Lnet/minecraft/class_1690;FFLnet/minecraft/class_4587;Lnet/minecraft/class_4597;I)V"
+      },
+      "com/cihv/leadopt/mixin/ClientPktListener": {
+        "handleEntityLinkPacket": "Lnet/minecraft/class_634;method_11110(Lnet/minecraft/class_2740;)V"
+      },
+      "com/cihv/leadopt/mixin/EndermanTeleportMixin": {
+        "teleport()Z": "Lnet/minecraft/class_1560;method_7029()Z"
+      },
+      "com/cihv/leadopt/mixin/LeadItemMixin": {
+        "Lnet/minecraft/world/item/LeadItem;bindPlayerMobs(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/InteractionResult;": "Lnet/minecraft/class_1804;method_7994(Lnet/minecraft/class_1657;Lnet/minecraft/class_1937;Lnet/minecraft/class_2338;)Lnet/minecraft/class_1269;",
+        "useOn": "Lnet/minecraft/class_1804;method_7884(Lnet/minecraft/class_1838;)Lnet/minecraft/class_1269;"
+      },
+      "com/cihv/leadopt/mixin/LeashFenceKnotEntityMixin": {
+        "interact": "Lnet/minecraft/class_1532;method_5688(Lnet/minecraft/class_1657;Lnet/minecraft/class_1268;)Lnet/minecraft/class_1269;"
+      },
+      "com/cihv/leadopt/mixin/MerchantEntityMixin": {
+        "canBeLeashed": "Lnet/minecraft/class_3988;method_5931(Lnet/minecraft/class_1657;)Z"
+      },
+      "com/cihv/leadopt/mixin/MobEntityMixin": {
+        "canBeLeashed": "Lnet/minecraft/class_1308;method_5931(Lnet/minecraft/class_1657;)Z"
+      },
+      "com/cihv/leadopt/mixin/MobMixin": {
+        "checkAndHandleImportantInteractions": "Lnet/minecraft/class_1308;method_29506(Lnet/minecraft/class_1657;Lnet/minecraft/class_1268;)Lnet/minecraft/class_1269;"
+      },
+      "com/cihv/leadopt/mixin/PandaEntityMixin": {
+        "canBeLeashed": "Lnet/minecraft/class_1440;method_5931(Lnet/minecraft/class_1657;)Z"
+      },
+      "com/cihv/leadopt/mixin/TurtleEntityMixin": {
+        "canBeLeashed": "Lnet/minecraft/class_1481;method_5931(Lnet/minecraft/class_1657;)Z"
+      },
+      "com/cihv/leadopt/mixin/WaterCreatureEntityMixin": {
+        "canBeLeashed": "Lnet/minecraft/class_1480;method_5931(Lnet/minecraft/class_1657;)Z"
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "leadopt",
+  "version": "${version}",
+  "name": "LeadOpt",
+  "description": "This is a mod adapted from \"MoreLeads (https://github.com/Nova-Committee/More-Leads),\" which fixes several bugs in the original mod and includes some optimizations. See the README for details.",
+  "authors": [
+    "cihv"
+  ],
+  "contact": {},
+  "license": "AGPL-3.0",
+  "icon": "assets/leadopt/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.cihv.leadopt.LeadOpt"
+    ]
+  },
+  "mixins": [
+    "leadopt.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "fabric": "*",
+    "minecraft": "*"
+  }
+}
