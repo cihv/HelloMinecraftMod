@@ -17,6 +17,9 @@
 	"entrypoints": {
 		"main": [
 			"com.cihv.Ori"
+		],
+		"client": [
+			"com.cihv.OriClient"
 		]
 	},
 	"mixins": [
