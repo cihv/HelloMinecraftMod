@@ -3,13 +3,13 @@
 	"id": "ori",
 	"version": "${version}",
 	"name": "Ori",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This mod adds a new creature called Ori, the protagonist of Ori and the Blind Forest.",
 	"authors": [
-		"Me!"
+		"cihv"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/cihv/HelloMinecraftMod/tree/ori-fabric-1.20.1"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/ori/icon.png",
