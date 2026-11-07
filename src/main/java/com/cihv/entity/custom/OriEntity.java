@@ -3,17 +3,17 @@ package com.cihv.entity.custom;
 import com.cihv.entity.ModEntities;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ai.goal.LookAtEntityGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.TemptGoal;
 import net.minecraft.entity.ai.goal.WanderAroundFarGoal;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.data.DataTracker;
+import net.minecraft.entity.data.TrackedData;
+import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.world.ServerWorld;
@@ -23,6 +23,12 @@ import org.jetbrains.annotations.Nullable;
 public class OriEntity extends AnimalEntity {
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
+    public final AnimationState jumpAnimationState = new AnimationState();
+    private int jumpTrigger = 0;
+    private int lastJumpTrigger = 0;
+    // 1. 跳跃激发器
+    private static final TrackedData<Integer> JUMP_ANIM_TRIGGER =
+            DataTracker.registerData(OriEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     public OriEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
@@ -67,11 +73,34 @@ public class OriEntity extends AnimalEntity {
     }
 
     private void setupAniamtionStates(){
+        //处于跳跃状态
+        if(this.lastJumpTrigger != this.getJumpTrigger()){
+            this.lastJumpTrigger = this.getJumpTrigger();
+            this.jumpAnimationState.start(this.age);
+        }
         if (this.idleAnimationTimeout <= 0) {
             this.idleAnimationTimeout = this.random.nextInt(40) + 80;
             this.idleAnimationState.start(this.age);
         } else {
             this.idleAnimationTimeout--;
         }
+    }
+    @Override
+    protected void initDataTracker() {
+        super.initDataTracker();
+        this.dataTracker.startTracking(JUMP_ANIM_TRIGGER, 0);
+    }
+    // 2. 重写 jump
+    @Override
+    public void jump() {
+        // 自定义跳跃物理（例如固定高度）
+         this.setVelocity(this.getVelocity().x, 0.42D, this.getVelocity().z);
+
+        // 跳跃动画开始
+        this.dataTracker.set(JUMP_ANIM_TRIGGER, ++this.jumpTrigger);
+    }
+    // 3. 返回跳跃激发器数值
+    public int getJumpTrigger() {
+        return this.dataTracker.get(JUMP_ANIM_TRIGGER);
     }
 }

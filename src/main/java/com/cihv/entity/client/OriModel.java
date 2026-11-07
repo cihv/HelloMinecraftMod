@@ -235,10 +235,11 @@ public class OriModel<T extends OriEntity> extends SinglePartEntityModel<T> {
 	@Override
 	public void setAngles(OriEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		this.getPart().traverse().forEach(ModelPart::resetTransform);
-		//移动时动画
+		//行走、空闲时动画
 		this.animateMovement(ModAnimations.ORI_WALK, limbSwing, limbSwingAmount, 2f, 2f);
-		//空闲时动画
 		this.updateAnimation(entity.idleAnimationState, ModAnimations.ORI_IDLE, ageInTicks, 1.0f);
+		//跳跃动画
+		this.updateAnimation(entity.jumpAnimationState, ModAnimations.ORI_JUMP_1, ageInTicks, 1.0f);
 	}
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
