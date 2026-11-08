@@ -235,12 +235,24 @@ public class OriModel<T extends OriEntity> extends SinglePartEntityModel<T> {
 	@Override
 	public void setAngles(OriEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		this.getPart().traverse().forEach(ModelPart::resetTransform);
-		//行走、空闲时动画
-		this.animateMovement(ModAnimations.ORI_WALK, limbSwing, limbSwingAmount, 2f, 2f);
-		this.updateAnimation(entity.idleAnimationState, ModAnimations.ORI_IDLE, ageInTicks, 1.0f);
-		//跳跃动画
+        //两种二段跳
+		if (entity.isJumping2()) {
+			this.updateAnimation(entity.jump2AnimationStatement, ModAnimations.ORI_JUMP_2, ageInTicks, 1.0f);
+			return;
+		}
+		if (entity.isJumping2Spin()) {
+			this.updateAnimation(entity.jump2SpinAnimationStatement, ModAnimations.ORI_JUMP_2_SPIN, ageInTicks, 1.0f);
+			return;
+		}
+        //行走
+		if(entity.isMoving(entity.getVelocity().horizontalLengthSquared())){
+			this.animateMovement(ModAnimations.ORI_WALK, limbSwing, limbSwingAmount, 2f, 2f);
+		}else {
+			this.updateAnimation(entity.idleAnimationState, ModAnimations.ORI_IDLE, ageInTicks, 1.0f);
+		}
+		//一段跳
 		this.updateAnimation(entity.jumpAnimationState, ModAnimations.ORI_JUMP_1, ageInTicks, 1.0f);
-	}
+    }
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
 		root.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
